@@ -1,12 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Wallpoet&display=swap");
 
 body {
-  font-family: "timenew", sans-serif;
+  font-family: "Wallpoet", sans-serif;
 }
 
 .hero {
   background: #bcc9e9;
-  font-family: "timenew", sans-serif;
+  font-family: "Wallpoet", sans-serif;
+}
+
+.name {
+  color:#6b88ca;
 }
 
 .projects-heading {
@@ -16,10 +20,7 @@ body {
   margin-top: 20px;
 }
 
-.container {
-  margin-top: 10px;
-  font-family: "ariel";
-}
+
 
 .card {
   background-color: #bcc9e9;
