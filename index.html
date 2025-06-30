@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0022)http://localhost:8080/ -->
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -9,6 +8,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="styles.css" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -44,26 +44,29 @@
     </div>
     <div class="jumbotron jumbotron-fluid" style="background-color: #bcc9e9">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6">
+        <div
+          class="d-flex flex-row align-items-center flex-nowrap"
+          style="gap: 2rem"
+        >
+          <div>
             <h1
               class="intro"
               style="
-                color: rgb(8, 2, 2);
-                font-size: xxx-large;
-                font-family: 'Rhodium Libre', serif;
+                color: rgb(49, 9, 71);
+                font-size: clamp(1.5rem, 1.5rem, 3rem);
+                font-family: 'Wall Poet', Courier, monospace;
                 text-shadow: 2px 2px 4px #abcbe8;
               "
             >
-              Hi, I am Abigail Diaz<br />
-              and I am a Web Developer |<br />
+              Hi, I am Abigail Diaz <br />
+              and I am a Web Developer |
               Software Engineer
             </h1>
           </div>
-          <div class="col-md-6 text-center">
+          <div>
             <img
               src="static/static-website.png"
-              style="width: 400px; margin-bottom: -130px"
+              style="width: 400px; margin-bottom: -200px"
               alt="laptop image"
               class="img-fluid"
             />
@@ -71,22 +74,21 @@
         </div>
       </div>
     </div>
-    <h3
-      class="ml-4 text-white"
-      style="font-family: 'Courier New', Courier, monospace"
-    >
-      <strong>Projects</strong>
-    </h3>
 
     <div class="container">
+      <h3
+        class="ml-4 text-white"
+        style="font-family: 'Wall Poet', Courier, monospace"
+      >
+        <strong>Projects</strong>
+      </h3>
       <div class="row">
-        <div class="col-sm-6 col-md-4 col-lg-4">
+        <div class="col-6 col-sm-6 col-md-4 col-lg-4">
           <div class="card mt-4">
             <img
               class="card-img-top"
               src="static/cat.png"
               alt="Card image cap"
-              style="height: 75mm"
             />
             <div class="card-body">
               <h5 class="card-title">Space Cat Game</h5>
@@ -104,13 +106,12 @@
           </div>
         </div>
 
-        <div class="col-sm-6 col-md-4 col-lg-4">
+        <div class="col-6 col-sm-6 col-md-4 col-lg-4">
           <div class="card mt-4">
             <img
               class="card-img-top"
               src="static/calculator.png"
               alt="Card image cap"
-              style="height: 75mm"
             />
             <div class="card-body">
               <h5 class="card-title">Budget Tool</h5>
@@ -119,7 +120,7 @@
                 budget performance.
               </p>
               <a
-                href="https://github.com/Abigail-Diaz/Budget"
+                href="https://github.com/Abigail-Diaz/Budget-Tracker"
                 class="btn"
                 style="background-color: #acd4e1; color: black"
                 >Visit on Github</a
@@ -128,13 +129,12 @@
           </div>
         </div>
 
-        <div class="col-sm-6 col-md-4 col-lg-4">
+        <div class="col-6 col-sm-6 col-md-4 col-lg-4">
           <div class="card mt-4">
             <img
               class="card-img-top"
               src="static/recipe.png"
               alt="Card image cap"
-              style="height: 75mm"
             />
             <div class="card-body">
               <h5 class="card-title">Recipe Generator</h5>

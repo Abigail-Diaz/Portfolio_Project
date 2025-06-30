@@ -1,0 +1,38 @@
+
+
+.hero {
+    background: #BCC9E9;
+}
+
+.container{
+    margin-top: 100px;
+}
+
+.card{
+    background-color: #00030a;
+}
+
+.card-title{
+    color: white;
+}
+
+.card-text{
+    height: 100px;
+}
+
+.card-img-top{
+    height: 200px;
+    width: auto;
+}
+
+.card-body > a {
+    margin-top: 50px;
+}
+p {
+    color: lightblue
+}
+
+
+
+
+
