@@ -1,38 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Wallpoet&display=swap");
 
+body {
+  font-family: "timenew", sans-serif;
+}
 
 .hero {
-    background: #BCC9E9;
+  background: #bcc9e9;
+  font-family: "timenew", sans-serif;
 }
 
-.container{
-    margin-top: 100px;
+.projects-heading {
+  font-family: "Wallpoet", sans-serif;
+  color: #a1b3dd;
+  font-size: 2rem;
+  margin-top: 20px;
 }
 
-.card{
-    background-color: #00030a;
+.container {
+  margin-top: 10px;
+  font-family: "ariel";
 }
 
-.card-title{
-    color: white;
+.card {
+  background-color: #bcc9e9;
 }
 
-.card-text{
-    height: 100px;
+.card-title {
+  color: rgb(36, 34, 34);
 }
 
-.card-img-top{
-    height: 200px;
-    width: auto;
+.card-text {
+  height: 100px;
+  size: 1.2rem;
+}
+
+.card-img-top {
+  height: 200px;
+  width: auto;
 }
 
 .card-body > a {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 p {
-    color: lightblue
+  color: rgb(0, 6, 8);
 }
-
-
-
-
-
