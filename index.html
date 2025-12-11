@@ -458,7 +458,7 @@
     </div>
   </section>
 
-  <!-- Demo Templates Section -->
+   <!-- Demo Carousel Section -->
 <section class="about-section fade-in" id="demos" style="padding-top: 100px;">
   <div class="container">
     <div class="row justify-content-center">
@@ -467,49 +467,61 @@
           Restaurant Landing Page Demos
         </h2>
         <p class="lead" style="color:#e8e8e8;">
-          A collection of modern, mobile-friendly restaurant pages I’ve built —
-          each includes a hero section, full menu system, contact section with a call button,
-          and Google Maps integration.
+          A collection of modern, mobile-friendly restaurant pages I’ve built.
+          Swipe or click the arrows to browse the demos.
         </p>
       </div>
     </div>
 
-    <!-- Demo Cards -->
-    <div class="row mt-5">
-      <!-- Demo 1 -->
-      <div class="col-md-6 mb-4">
-        <div class="card" style="background:#0c1730; border:1px solid rgba(0,116,217,0.3); box-shadow:0 0 15px rgba(0,116,217,0.2);">
-          <img src="static/demo1.png" class="card-img-top" alt="Demo 1">
-          <div class="card-body text-center">
-            <h5 class="card-title" style="color:#0074D9; font-family:'Wall Poet';">Demo 1</h5>
-            <p class="card-text" style="color:#e8e8e8;">
-              One-page restaurant landing site with full menu, contact section,
-              call-now button, and Google Maps embed.
-            </p>
-            <a href="https://abigail-diaz.github.io/Restaurant-Demo-1/" class="btn btn-primary" target="_blank"
-               style="background:#0074D9; border:none;">View Demo</a>
+    <!-- Carousel -->
+    <div id="demoCarousel" class="carousel slide mt-5" data-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Demo 1 -->
+        <div class="carousel-item active">
+          <div class="card mx-auto" style="max-width: 500px; background:#0c1730; border:1px solid rgba(0,116,217,0.3); box-shadow:0 0 15px rgba(0,116,217,0.2);">
+            <img src="static/demo-1.png" class="card-img-top" alt="Demo 1">
+            <div class="card-body text-center">
+              <h5 class="card-title" style="color:#0074D9; font-family:'Wall Poet';">Demo 1</h5>
+              <p class="card-text" style="color:#e8e8e8;">
+                One-page restaurant landing site with full menu, contact section,
+                call-now button, and Google Maps embed.
+              </p>
+              <a href="https://abigail-diaz.github.io/Restaurant-Demo-1/" class="btn btn-primary" target="_blank"
+                 style="background:#0074D9; border:none;">View Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Demo 2 -->
+        <div class="carousel-item">
+          <div class="card mx-auto" style="max-width: 500px; background:#0c1730; border:1px solid rgba(0,116,217,0.3); box-shadow:0 0 15px rgba(0,116,217,0.2);">
+            <img src="static/demo-2.png" class="card-img-top" alt="Demo 2">
+            <div class="card-body text-center">
+              <h5 class="card-title" style="color:#0074D9; font-family:'Wall Poet';">Demo 2</h5>
+              <p class="card-text" style="color:#e8e8e8;">
+                Additional design variations and future templates will appear here as I expand
+                my collection.
+              </p>
+              <a href="#" class="btn btn-primary disabled"
+                 style="background:#0074D9; border:none;">Coming Soon</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Demo 2 Placeholder -->
-      <div class="col-md-6 mb-4">
-        <div class="card" style="background:#0c1730; border:1px solid rgba(0,116,217,0.3); box-shadow:0 0 15px rgba(0,116,217,0.2);">
-          <img src="static/demo2.png" class="card-img-top" alt="Demo 2">
-          <div class="card-body text-center">
-            <h5 class="card-title" style="color:#0074D9; font-family:'Wall Poet';">Demo 2</h5>
-            <p class="card-text" style="color:#e8e8e8;">
-              Additional design variations and future templates will appear here as I expand
-              my collection.
-            </p>
-            <a href="#" class="btn btn-primary disabled"
-               style="background:#0074D9; border:none;">Coming Soon</a>
-          </div>
-        </div>
-      </div>
+      <!-- Controls -->
+      <a class="carousel-control-prev" href="#demoCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#demoCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
 </section>
+
 
 
   <!-- Footer -->
