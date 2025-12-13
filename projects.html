@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -158,20 +159,20 @@
       .projects-section {
         padding: 120px 0 60px 0;
       }
-      
+
       .section-title {
         font-size: 2rem;
       }
-      
+
       .project-img {
         width: 120px;
         height: 120px;
       }
-      
+
       .project-title {
         font-size: 1.3rem;
       }
-      
+
       .project-description {
         font-size: 1rem;
       }
@@ -183,15 +184,24 @@
       animation: fadeInUp 0.6s ease forwards;
     }
 
-    .project-container:nth-child(2) { animation-delay: 0.1s; }
-    .project-container:nth-child(4) { animation-delay: 0.2s; }
-    .project-container:nth-child(6) { animation-delay: 0.3s; }
+    .project-container:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    .project-container:nth-child(4) {
+      animation-delay: 0.2s;
+    }
+
+    .project-container:nth-child(6) {
+      animation-delay: 0.3s;
+    }
 
     @keyframes fadeInUp {
       from {
         opacity: 0;
         transform: translateY(30px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -204,7 +214,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
-      <h1 style = "margin-left: 10px;">Portfolio</h1>
+      <h1 style="margin-left: 10px;">Portfolio</h1>
       <div class="ml-auto">
         <a class="navbar-brand ml-3" href="index.html">Home</a>
         <a class="navbar-brand" href="projects.html">Projects</a>
@@ -220,15 +230,35 @@
         <strong>Projects</strong>
       </h2>
       <div class="section-underline"></div>
+      <!-- Project 1 -->
+      <div class="project-container">
+        <img src="static/navigation.png" alt="Space Cat Game" class="img-fluid rounded-circle project-img" />
+        <h5 class="project-title">Campus Accessibility Navigator</h5>
+        <p class="project-description">
+          A mobile navigation app to help students with visual impairments and disabilities navigate the CSULA campus
+          via safe, accessible routes. The app provides turn-by-turn directions to building entrances with ramps,
+          elevators, and accessible pathways while incorporating campus landmarks for easier wayfinding.
+        </p>
+        <p class="project-description">Tech Stack: Flutter, Valhalla routing engine, OpenStreetMap and Docker.</p>
+        <a href="https://github.com/Abigail-Diaz/Space-Cat-Game-Abigail-Diaz/tree/main" target="_blank"
+          class="project-btn">
+          Visit on GitHub
+        </a>
+      </div>
+
+      <hr class="project-divider" />
+
 
       <!-- Project 1 -->
       <div class="project-container">
         <img src="static/cat.png" alt="Space Cat Game" class="img-fluid rounded-circle project-img" />
         <h5 class="project-title">Space Cat Game</h5>
         <p class="project-description">
-          A platformer game featuring a brave cat and various enemies it must avoid to reach the finish line, all while in space!
+          A platformer game featuring a brave cat and various enemies it must avoid to reach the finish line, all while
+          in space!
         </p>
-        <a href="https://github.com/Abigail-Diaz/Space-Cat-Game-Abigail-Diaz/tree/main" target="_blank" class="project-btn">
+        <a href="https://github.com/Abigail-Diaz/Space-Cat-Game-Abigail-Diaz/tree/main" target="_blank"
+          class="project-btn">
           Visit on GitHub
         </a>
       </div>
@@ -275,4 +305,5 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>
