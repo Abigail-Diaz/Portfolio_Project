@@ -1,29 +1,334 @@
-<!-- About Me Section -->
-<section class="about-section fade-in">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <h2>About Me</h2>
-        <div class="lead">
-          <p>
-            I am a developer focused on the intersection of cloud architecture and high-precision navigation. My recent work involves building <strong>EagleNav</strong>, 
-            a pedestrian-centric platform designed to solve the "last 100 feet" of navigation where traditional GPS often fails.
-          </p>
-          <p>I specialize in creating efficient, scalable mapping solutions by:</p>
-          <ul style="list-style-type: none; padding-left: 0;">
-            <li class="mb-3">
-              <span style="color: #0074D9;">▹</span> <strong>Architecting Hybrid Systems:</strong> Using Dockerized Valhalla engines and optimizing data delivery via Cloudflare and GCP.
-            </li>
-            <li class="mb-3">
-              <span style="color: #0074D9;">▹</span> <strong>Precision Navigation:</strong> Implementing sensor fusion and custom topological logic for sub-meter accurate guidance.
-            </li>
-            <li class="mb-3">
-              <span style="color: #0074D9;">▹</span> <strong>Full-Stack Development:</strong> Crafting React interfaces that transform complex spatial data into seamless experiences.
-            </li>
-          </ul>
-          <p>I am passionate about building robust "digital twins" that provide real-world utility and exceptional user satisfaction.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Abigail Diaz | Geospatial Systems Engineer</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Wallpoet&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #0c1730;
+      line-height: 1.6;
+      font-family: 'Courier New', Courier, monospace;
+      color: #e8e8e8;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, .navbar-brand, .intro-text strong, .name {
+      font-family: 'Wallpoet', cursive;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      background: rgba(12, 23, 48, 0.95) !important;
+      padding: 1.5rem 0;
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(0, 116, 217, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      background: rgba(12, 23, 48, 0.98) !important;
+      box-shadow: 0 2px 20px rgba(0, 116, 217, 0.2);
+    }
+
+    .navbar h1 {
+      color: #ffffff !important;
+      font-size: 1.8rem;
+      margin: 0;
+      text-shadow: 0 0 10px rgba(0, 116, 217, 0.3);
+    }
+
+    .navbar-brand {
+      color: #ffffff !important;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .navbar-brand:hover {
+      color: #0074D9 !important;
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 160px 0 100px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background: radial-gradient(circle at 20% 50%, rgba(0, 116, 217, 0.15) 0%, transparent 50%);
+    }
+
+    .intro-text {
+      color: #ffffff;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.2;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .name {
+      color: #0074D9;
+      text-shadow: 0 0 20px rgba(0, 116, 217, 0.6);
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 20px rgba(0, 116, 217, 0.6); }
+      to { text-shadow: 0 0 35px rgba(0, 116, 217, 0.9); }
+    }
+
+    .profile-img {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ffffff;
+      box-shadow: 0 0 30px rgba(0, 116, 217, 0.4);
+      transition: all 0.4s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    /* About Section */
+    .about-section {
+      padding: 100px 0;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .about-section h2 {
+      color: #0074D9;
+      font-size: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .about-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .about-list li {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .about-list li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: #0074D9;
+      font-weight: bold;
+    }
+
+    /* Skills Section */
+    .skills-section {
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .section-underline {
+      width: 80px;
+      height: 4px;
+      background: #0074D9;
+      margin: 0 auto 3rem;
+    }
+
+    .icon-row img {
+      height: 65px;
+      width: 65px;
+      margin: 20px;
+      transition: all 0.3s ease;
+      filter: grayscale(20%);
+    }
+
+    .icon-row img:hover {
+      transform: translateY(-10px) scale(1.1);
+      filter: grayscale(0%) drop-shadow(0 0 15px rgba(0, 116, 217, 0.5));
+    }
+
+    .social-icons img {
+      height: 40px;
+      margin: 0 15px;
+      filter: invert(1);
+      opacity: 0.7;
+      transition: 0.3s;
+    }
+
+    .social-icons img:hover {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid rgba(0, 116, 217, 0.2);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: 1s all ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .hero-section { text-align: center; padding-top: 120px; }
+      .profile-img { margin-top: 40px; width: 220px; height: 220px; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+    <div class="container">
+      <h1>PORTFOLIO</h1>
+      <div class="ml-auto">
+        <a class="navbar-brand ml-3" href="#home">HOME</a>
+        <a class="navbar-brand ml-3" href="projects.html">PROJECTS</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <div class="intro-text">
+            <strong>
+              HI, I'M <span class="name">ABIGAIL</span><br />
+              <span style="font-size: 0.5em; opacity: 0.8; font-family: 'Courier New';">
+                SOFTWARE ENGINEER | GEOSPATIAL SYSTEMS & CLOUD INFRASTRUCTURE
+              </span>
+            </strong>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center">
+          <img src="static/profile.png" alt="Abigail Diaz" class="profile-img" />
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="about-section fade-in">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <h2>ABOUT ME</h2>
+          <div style="font-size: 1.1rem;">
+            <p>
+              I am a developer focused on the intersection of cloud architecture and high-precision navigation. My recent work involves building <strong>EagleNav</strong>, 
+              a pedestrian-centric platform designed to solve the "last 100 feet" of navigation where traditional GPS often fails.
+            </p>
+            <p>I specialize in creating efficient, scalable mapping solutions by:</p>
+            <ul class="about-list">
+              <li>
+                <strong>Architecting Hybrid Systems:</strong> Utilizing Dockerized Valhalla engines and optimizing data delivery via Cloudflare R2 and GCP to maintain high performance with low egress costs.
+              </li>
+              <li>
+                <strong>Precision Navigation:</strong> Implementing sensor fusion logic and custom topological mapping to provide sub-meter accurate, intelligent turn-by-turn guidance.
+              </li>
+              <li>
+                <strong>Full-Stack Development:</strong> Crafting modern React interfaces that transform complex spatial datasets into seamless, accessible user experiences.
+              </li>
+            </ul>
+            <p>I am passionate about building robust "digital twins" of the physical world that provide real-world utility and exceptional functionality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills-section fade-in">
+    <div class="container">
+      <h2 style="font-family: 'Wallpoet';">TECHNICAL STACK</h2>
+      <div class="section-underline"></div>
+
+      <div class="d-flex justify-content-center flex-wrap icon-row">
+        <!-- Core -->
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" />
+        
+        <!-- Geospatial & Data -->
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" title="PostgreSQL / PostGIS" />
+        
+        <!-- Infrastructure -->
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" title="Docker" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP" title="Google Cloud Platform" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" title="Linux / Ubuntu" />
+      </div>
+
+      <!-- Social Links -->
+      <div class="social-icons mt-5">
+        <a href="https://github.com/Abigail-Diaz" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+        </a>
+        <a href="https://www.linkedin.com/in/abigail-diaz-61710a247/" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style="filter:none; opacity:1;" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="mb-0">© 2026 ABIGAIL DIAZ | BUILT FOR PRECISION</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Intersection Observer for fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
